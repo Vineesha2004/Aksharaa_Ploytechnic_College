@@ -1,0 +1,25 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  /* font-family: " Poppins ", sans-serif; */
+}
+body{
+  font-family:"Roboto", sans-serif;
+}
+
+h1,h2,h3,h4{
+  font-family:"Poppins", sans-serif;
+  
+}
+html {
+    scroll-behavior: smooth;
+}
+.nav-links{
+  text-transform:uppercase;
+}
+
+.section-title{
+  text-transform:uppercase;
+  letter-spacing:1px;
+}

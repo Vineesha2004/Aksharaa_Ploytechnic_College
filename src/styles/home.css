@@ -1,0 +1,188 @@
+/* ===== GLOBAL CONTAINER ===== */
+
+.container{
+  width:90%;
+  margin:auto;
+}
+
+
+/* ===== ABOUT SECTION ===== */
+
+.about-section{
+  padding:70px 0;
+  background:#ffffff;
+}
+
+/* GRID LAYOUT */
+
+.about-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:40px;
+  align-items:start;
+}
+
+/* LEFT TEXT */
+
+.about-text h2{
+  color:#0A2540;
+  margin-bottom:18px;
+  text-transform: uppercase;
+}
+
+.about-text p{
+  font-size:16px;
+  line-height:1.7;
+  margin-bottom:15px;
+  color:#333;
+} 
+.about-link{
+  display:inline-block;
+  margin-top:12px;
+  padding:8px 18px;
+  font-weight:600;
+  text-decoration:none;
+
+  background:#d09c0bd6;
+  color:#0A2540;
+  border:2px solid #d09c0bd6;
+  border-radius:4px;
+
+  transition:0.3s;
+}
+
+.about-link:hover{
+  background:#0A2540;
+  color:#ffffff;
+  border-color:#0A2540;
+}
+
+/* RIGHT HIGHLIGHTS BOX */
+
+.about-highlights{
+  background:#f5f7fb;
+  padding:28px;
+  border-radius:8px;
+  border-left:4px solid #F4B400;
+  margin-top:10px;   /* aligns box with text block */
+}
+
+.about-highlights h3{
+  color:#0A2540;
+  margin-bottom:18px;
+}
+
+.about-highlights ul{
+  list-style:none;
+  padding:0;
+}
+
+.about-highlights li{
+  margin-bottom:12px;
+  font-size:15px;
+  color:#444;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+/* ===== CARDS SECTION ===== */
+
+.cards-section{
+  padding:60px 0;
+  background:#f5f7fb;
+}
+
+.cards-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+
+/* CARD */
+
+.card{
+  background:white;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  text-align:center;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+
+/* IMAGE */
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+
+/* TEXT */
+
+.card h3{
+  margin-top:15px;
+  color:#0A2540;
+}
+
+.card p{
+  padding:10px 15px;
+  font-size:14px;
+  color:#555;
+}
+
+
+/* BUTTON */
+
+.card button{
+  margin:15px;
+  padding:10px 20px;
+  border:none;
+  background:#d09c0bd6;
+  color:#0A2540;
+  font-weight:600;
+  cursor:pointer;
+  border-radius:4px;
+  transition:0.3s;
+}
+
+.card button:hover{
+  background:#0A2540;
+  color:white;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:900px){
+
+  .cards-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+@media(max-width:600px){
+
+  .cards-grid{
+    grid-template-columns:1fr;
+  }
+
+  .about-section{
+    padding:40px 0;
+  }
+
+}

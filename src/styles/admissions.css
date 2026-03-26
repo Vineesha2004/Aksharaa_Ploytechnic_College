@@ -1,0 +1,291 @@
+/* ================= ADMISSIONS PAGE ================= */
+
+.admissions{
+  padding:50px 10%;
+  background:#eef3f8;
+}
+
+
+/* HERO */
+
+.admissions-hero{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.admissions-hero h1{
+  font-size:40px;
+  color:#0A2540;
+  margin-bottom:10px;
+}
+
+.admissions-hero h1::after{
+  content:"";
+  width:120px;
+  height:4px;
+  background:#d09c0bd6;
+  display:block;
+  margin:12px auto 0;
+  border-radius:3px;
+}
+
+.admissions-hero p{
+  max-width:650px;
+  margin:auto;
+  color:#555;
+  line-height:1.7;
+  margin-bottom:20px;
+}
+
+
+/* APPLY BUTTON */
+
+.apply-btn{
+  background:#0A2540;
+  color:white;
+  border:none;
+  padding:14px 28px;
+  font-size:15px;
+  border-radius:6px;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  transition:0.3s;
+}
+
+.apply-btn:hover{
+  background:#d09c0bd6;
+  color:#0A2540;
+}
+
+
+/* SECTION */
+
+.admission-section{
+  background:#ffffff;
+  /* padding:35px 45px; */
+  border-radius:12px;
+  margin-bottom:35px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.05);
+  border-left:5px solid #d09c0bd6;
+  
+}
+
+.admission-section h2{
+  color:#0A2540;
+  margin-bottom:15px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding-left: 35px;
+}
+
+.section-icon{
+  color:#d09c0bd6;
+  
+}
+
+.admission-section p{
+  color:#555;
+  line-height:1.7;
+  padding-left: 35px;
+}
+
+.admission-section ul{
+  padding-left:35px;
+}
+
+.admission-section ul li{
+  margin-bottom:8px;
+  color:#555;
+}
+
+.admission-section ul li::marker{
+  color:#d09c0bd6;
+}
+
+
+/* GRID FOR ELIGIBILITY + DOCUMENTS */
+
+.admission-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  margin-bottom:35px;
+}
+
+
+/* PROCESS STEPS */
+
+.process-steps{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:20px;
+  padding-left: 35px;
+   padding-right: 35px;
+}
+
+.step{
+  background:#eef3f8;
+  padding:25px;
+  border-radius:10px;
+  flex:1 1 180px;
+  min-width:180px;
+  text-align:center;
+
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover{
+  transform:translateY(-5px);
+  box-shadow:0 12px 28px rgba(0,0,0,0.12);
+}
+
+.step span{
+  display:block;
+  font-size:22px;
+  font-weight:700;
+  color:#d09c0bd6;
+  margin-bottom:8px;
+}
+
+
+/* FORM SECTION */
+
+.admission-form-section{
+  background:#ffffff;
+  padding:40px 60px;
+  border-radius:12px;
+  margin-top:30px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.05);
+  border-left:5px solid #d09c0bd6;
+}
+
+.admission-form-section h2{
+  text-align:center;
+  margin-bottom:25px;
+  color:#0A2540;
+}
+
+
+/* FORM */
+
+.admission-form{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.admission-form input,
+.admission-form select,
+.admission-form textarea{
+  padding:12px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  font-size:14px;
+  outline:none;
+}
+
+.admission-form textarea{
+  grid-column:span 2;
+  height:100px;
+  resize:none;
+}
+
+.admission-form button{
+  grid-column:span 2;
+  padding:14px;
+  background:#0A2540;
+  color:#fff;
+  border:none;
+  border-radius:6px;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.admission-form button:hover{
+  background:#d09c0bd6;
+  color:#0A2540;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .admission-grid{
+    grid-template-columns:1fr;
+  }
+
+  .process-steps{
+    flex-direction:column;
+  }
+
+  .admission-form{
+    grid-template-columns:1fr;
+  }
+
+  .admission-form textarea,
+  .admission-form button{
+    grid-column:span 1;
+  }
+
+}
+
+@media(max-width:768px){
+
+  /* ONLY FORM SECTION */
+  .admission-form-section{
+    padding:20px 15px;   /* reduce side spacing */
+  }
+
+  /* FORM GRID → single column */
+  .admission-form{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  /* INPUTS FULL WIDTH */
+  .admission-form input,
+  .admission-form select,
+  .admission-form textarea{
+    width:100%;
+    font-size:14px;
+  }
+
+  /* FIX textarea + button span */
+  .admission-form textarea,
+  .admission-form button{
+    grid-column:span 1;
+  }
+
+  /* BUTTON SIZE */
+  .admission-form button{
+    padding:12px;
+    font-size:15px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  /* give inner spacing */
+  .admission-form{
+    padding:0 10px;   /* 👈 creates left & right gap */
+  }
+
+  /* ensure inputs don’t overflow */
+  .admission-form input,
+  .admission-form select,
+  .admission-form textarea{
+    width:100%;
+    box-sizing:border-box;  /* important */
+  }
+
+}

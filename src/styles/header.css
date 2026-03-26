@@ -1,0 +1,230 @@
+/* ================= HEADER ================= */
+
+.header{
+  background:white;
+  border-bottom:1px solid #e5e5e5;
+}
+
+
+/* ===== MAIN CONTAINER ===== */
+
+.header-container{
+  width:92%;
+  margin:auto;
+  padding:10px 0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+/* ===== LEFT SECTION ===== */
+
+.main-info{
+  display:flex;
+  align-items:center;   /* keeps logo & text in one line */
+  gap:20px;
+}
+
+/* LOGO */
+.logo{
+  width:80px;
+  height:80px;
+  /* object-fit:contain; */
+   object-fit:cover;     
+  border-radius:50%; 
+ border:2px solid #0A2540;        /* clean border */
+  box-shadow:0 2px 6px rgba(0,0,0,0.2);  }
+
+/* TEXT BLOCK */
+.college-block{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  line-height:1.2;
+}
+
+/* COLLEGE NAME */
+.college-name{
+  margin:0;
+  font-size:24px;
+  font-weight:700;
+  color:#0A2540;
+  letter-spacing:0.5px;
+  text-transform: uppercase;
+}
+
+/* second line styling (Polytechnic College) */
+.college-name span{
+  font-weight:700;
+}
+
+/* LOCATION */
+.college-location{
+  margin-top:2px;
+  font-size:13px;
+  color:#6c757d;
+  text-transform: uppercase;
+}
+/* ===== CENTER SECTION (BIG LOGOS) ===== */
+
+.accreditation{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:40px;
+  flex:1; 
+}
+.accreditation img{
+  height:80px;   
+  width:auto;
+  object-fit:contain;
+  transition:0.25s ease;
+  cursor:pointer;
+}
+.accreditation .aicte-logo{
+  height:90px;  
+  width:auto;
+}
+
+.accreditation img{
+  object-fit:contain;
+  transition:0.25s ease;
+  cursor:pointer;
+} 
+
+.accreditation img:hover{
+  transform:scale(1.08);
+}
+
+
+/* TOOLTIP (keep same) */
+
+.accred-item{
+  position:relative;
+  display:inline-block;
+}
+
+.accred-tooltip{
+  position:absolute;
+  top:110%;
+  left:50%;
+  transform:translateX(-50%);
+
+  background:white;
+  border:1px solid #e5e5e5;
+  border-radius:6px;
+
+  padding:8px 12px;
+  font-size:13px;
+  width:230px;
+
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+
+  opacity:0;
+  visibility:hidden;
+  transition:0.2s;
+  z-index:9999;
+}
+
+.accred-item:hover .accred-tooltip{
+  opacity:1;
+  visibility:visible;
+}
+
+
+/* ===== RIGHT SECTION (UNCHANGED) ===== */
+
+.contact-section{
+  display:flex;
+  align-items:center;
+  gap:35px;
+}
+
+
+/* COLLEGE CODE */
+
+.college-code{
+  text-align:center;
+}
+
+.college-code p{
+  margin:0;
+  font-size:17px;
+  color:black;
+  letter-spacing:1px;
+  margin-bottom:10px;
+}
+
+.college-code h2{
+  font-size:26px;
+  font-weight:700;
+
+  background: linear-gradient(90deg, #F4B400, #001f3f, #F4B400);
+  background-size:200% auto;
+
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  animation:shine 3s linear infinite;
+}
+
+@keyframes shine{
+  0%{ background-position:0% center; }
+  100%{ background-position:200% center; }
+}
+
+
+/* ADMISSIONS */
+
+.admission{
+  text-align:right;
+}
+
+.admission-title{
+  margin:0;
+  font-weight:600;
+  color:#0A2540;
+}
+
+.admission p{
+  margin:2px 0;
+  font-size:14px;
+  color:#0A2540;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width:900px){
+
+  .header-container{
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+  }
+
+  .logo-section{
+    justify-content:center;
+  }
+
+  .accreditation{
+    gap:25px;
+  }
+
+  .aicte-logo{
+    height:65px;
+  }
+
+  .sbtet-logo{
+    height:60px;
+  }
+
+  .contact-section{
+    justify-content:center;
+    gap:20px;
+  }
+
+  .admission{
+    text-align:center;
+  }
+}
