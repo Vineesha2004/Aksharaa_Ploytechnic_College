@@ -1,4 +1,4 @@
-# Aksharaa Polytechnic Website (React)
+## Aksharaa Polytechnic Website (React)
 
 A fully responsive college website built using React and Vite, focused on delivering a modern and intuitive user interface. The application emphasizes structured content organization, seamless navigation, and optimized performance across multiple devices. 
 It showcases key institutional information, academic offerings, and user-friendly design practices aligned with real-world web development standards
